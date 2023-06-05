@@ -50,20 +50,21 @@ router.post('/edit/:id', async(req, res) =>{
    res.redirect('/movie');
 
 })
-
-router.get('/sort/asc', async (req, res) =>{
-   var movies = await MovieModel.find().sort({title: 1})
-   res.render('movie/list', { movies : movies})
-})
-
-router.get('/sort/desc', async (req, res) =>{
-   var movies = await MovieModel.find().sort({title: -1})
-   res.render('movie/list', { movies : movies})
-})
-
+//search function
 router.post('/search', async (req, res) => {
    var keyword = req.body.title;
    var movies = await MovieModel.find({ title: new RegExp(keyword, "i")})
+   res.render('movie/list', { movies: movies })
+})
+
+//sort function
+router.get('/sort/asc', async (req, res) => {
+   var movies = await MovieModel.find().sort({ title: 1 })
+   res.render('movie/list', { movies: movies })
+})
+
+router.get('/sort/desc', async (req, res) => {
+   var movies = await MovieModel.find().sort({ title: -1 })
    res.render('movie/list', { movies: movies })
 })
 
