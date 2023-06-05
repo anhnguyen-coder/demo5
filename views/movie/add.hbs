@@ -1,0 +1,32 @@
+<div class="container text-center mt-3 mb-3 col-md8">
+    <form class =" card bg-light ml-3 mr-3" action="/movie/add" method="post">
+    <h1 class="text text-primary mt-2 mb-2"> Add new movie</h1>
+        <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">Title</label>
+            <input class="form-control" type="text" name = "title" required minlength="3" maxlength=" 100">
+        </div>
+        <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">Year</label>
+            <input class="form-control" type="number" name="year" required minlength="1970" maxlength="2023">
+        </div>
+        <div class="form-group mt-2 mb-2">
+            <label  class="fw-bold"for="">Director</label>
+            <input  class="form-control" type="text" name = "director" required minlength="3" maxlength=" 100">
+        </div>
+        <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">Actor</label>
+            <input class="form-control" type="text" name = "actor" required minlength="3" maxlength=" 100">
+        </div>
+        <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">Poster</label>
+            <input class="form-control" type="text" name = "poster" required>
+        </div>
+        <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">Trailer</label>
+            <input class="form-control" type="text" name = "trailer" required>
+        </div>
+        <div class="form-group mt-2 mb-2">
+            <input class="btn btn-secondary" type="submit" value="Add">
+        </div>
+    </form>
+</div>
